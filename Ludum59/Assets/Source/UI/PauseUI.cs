@@ -39,6 +39,7 @@ public class PauseUI : MonoBehaviour
     
         private void TogglePause()
         {
+                AudioManager.Instance.Play("UIOpen");
                 if (isPaused)
                 {
                         ResumeGame();
@@ -66,7 +67,7 @@ public class PauseUI : MonoBehaviour
         public void PausePerformedFromUI()
         {
                 if (canPause)
-                {
+                { 
                         TogglePause();
                 }
         }
