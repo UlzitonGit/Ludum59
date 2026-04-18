@@ -11,13 +11,19 @@ public class CreatureMovement : MonoBehaviour
     
     private bool _isMoving = false;
     private float _startY;
+    MovesData _moves;
+
+    private void Awake()
+    {
+        _moves = new MovesData();
+    }
 
     public void SetDirection(string direction)
     {
-        if(direction == "left") TryMove(new Vector3(-_gridData._cellSize, 0, 0));
-        if(direction == "right")  TryMove(new Vector3(_gridData._cellSize, 0, 0));
-        if(direction == "up")  TryMove(new Vector3(0, 0, _gridData._cellSize));
-        if(direction == "down")  TryMove(new Vector3(0, 0, -_gridData._cellSize));
+        if(direction == _moves.left) TryMove(new Vector3(-_gridData._cellSize, 0, 0));
+        if(direction == _moves.right)  TryMove(new Vector3(_gridData._cellSize, 0, 0));
+        if(direction == _moves.up)  TryMove(new Vector3(0, 0, _gridData._cellSize));
+        if(direction == _moves.down)  TryMove(new Vector3(0, 0, -_gridData._cellSize));
     }
     private void Start()
     {
