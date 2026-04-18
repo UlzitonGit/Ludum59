@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CreatureMovement : MonoBehaviour
 {
-    [SerializeField] private GridData _gridData;
+    [SerializeField] public GridData _gridData;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private Transform _checkPos;
     
