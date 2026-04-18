@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,10 +11,11 @@ public class TurnsController : MonoBehaviour
     [SerializeField] private PlayerManager _playerManager;
     [SerializeField] private MoveUIList _movesUI;
     [SerializeField] private TextMeshProUGUI _turnsText;
+    [SerializeField] private StageController _stage;
     public bool PathDone;
     public bool CardsUsed;
     private int allActionObjects;
-    private int currentActionObjects;
+    public int currentActionObjects;
     private int turnCount;
 
 
@@ -53,10 +56,23 @@ public class TurnsController : MonoBehaviour
 
     private void EndTurn()
     {
+        StartCoroutine(TurnEnd());
+    }
+
+    IEnumerator TurnEnd()
+    {
+        yield return new WaitForSeconds(2);
         for (int i = 0; i < 5; i++)
         {
             _movesUI.RemoveMove(0);
         }
         currentActionObjects = allActionObjects;
+        _stage.CheckStageState();
+    }
+    public void EndStage()
+    {
+        turnCount = 1;
+        _turnsText.text = "TURN " + turnCount.ToString();
+        allActionObjects = 0;
     }
 }

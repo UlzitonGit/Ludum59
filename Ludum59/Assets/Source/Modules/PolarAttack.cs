@@ -9,7 +9,6 @@ public class PolarAttack : Modul
     [SerializeField] private Modul _nextModulInCombo;
     private void Start()
     {
-        turnsToPrepare = 8;
         curentTurn = turnsToPrepare;
     }
 
@@ -25,9 +24,9 @@ public class PolarAttack : Modul
 
     public override void Perform(Vector3 pos)
     {
-        _polar.Play();
-        print("Attack");
-        Collider[] hitColliders = Physics.OverlapSphere( transform.position, _radius, _mask);
+        if(pos == Vector3.zero) pos = transform.position;
+        Collider[] hitColliders = Physics.OverlapSphere( pos, _radius, _mask);
+        Instantiate(_polar, pos, Quaternion.Euler(new Vector3(90, 0, 0)));
         if (hitColliders.Length > 0)
         {
             hitColliders[0].GetComponent<IDamagable>().GetDamage(damage);
@@ -42,6 +41,6 @@ public class PolarAttack : Modul
 
     public override void SetChildModule(Modul module)
     {
-        throw new NotImplementedException();
+        _nextModulInCombo = module;
     }
 }

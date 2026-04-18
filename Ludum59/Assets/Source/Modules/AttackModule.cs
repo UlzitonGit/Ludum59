@@ -37,7 +37,7 @@ public class AttackModule : Modul
         curentTurn = turnsToPrepare;
         if (_nextModulInCombo != null)
         {
-            _nextModulInCombo.Perform(transform.position);
+            _nextModulInCombo.Perform(curPosition);
         }
         curentTurn = turnsToPrepare;
     }

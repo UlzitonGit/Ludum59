@@ -9,15 +9,20 @@ public class GeneralEnemyManager : MonoBehaviour
     [SerializeField] private EnemyController[] enemiesPrefabs;
     [SerializeField] private TurnsController playerTurns;
     private List<EnemyController> enemies = new List<EnemyController>();
-    
+    public int enemiesAlive = 0;
+    private StageController stageController;
 
-    public void Initialize()
+    public void Initialize(StageController _stageController)
     {
+        enemies.Clear();
+        enemiesAlive = 0;
+        stageController = _stageController;
         enemies.Add(Instantiate(enemiesPrefabs[Random.Range(0, enemiesPrefabs.Length)], new Vector3(_gridData._grid[57].transform.position.x, 1.3f,_gridData._grid[57].transform.position.z), Quaternion.identity));
         for (int i = 0; i < enemies.Count; i++)
         {
             enemies[i].GetComponent<CreatureMovement>()._gridData = _gridData;
             playerTurns.InitActionObjects();
+            enemiesAlive++;
         }
     }
 
@@ -26,6 +31,15 @@ public class GeneralEnemyManager : MonoBehaviour
         foreach (var enemy in enemies)
         {
             enemy.StartMovement(playerTurns);
+        }
+    }
+
+    public void EnemyKilled()
+    {
+        enemiesAlive--;
+        if (enemiesAlive == 0)
+        {
+            stageController.AllEnemiesDead();
         }
     }
 }

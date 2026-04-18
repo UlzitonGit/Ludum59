@@ -17645,6 +17645,7 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 5117622365174459026, guid: 398915ebbd5002d41a40331458287667, type: 3}
   playerTurns: {fileID: 501451388}
+  enemiesAlive: 0
 --- !u!1 &403386549
 GameObject:
   m_ObjectHideFlags: 0
@@ -18269,10 +18270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc224d0821869c449932770ae07bdfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StageController
+  _text: {fileID: 1355896351}
   turnsController: {fileID: 501451388}
   modsUIController: {fileID: 1467865851}
   playerManager: {fileID: 359537672}
   enemyManager: {fileID: 388365983}
+  player: {fileID: 359537670}
 --- !u!1 &478511667
 GameObject:
   m_ObjectHideFlags: 0
@@ -23569,6 +23572,7 @@ MonoBehaviour:
   _playerManager: {fileID: 359537672}
   _movesUI: {fileID: 1377687049}
   _turnsText: {fileID: 1981923247}
+  _stage: {fileID: 467251044}
   PathDone: 0
   CardsUsed: 0
 --- !u!4 &501451389
@@ -37966,7 +37970,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1185261551}
   - component: {fileID: 1185261550}
-  - component: {fileID: 1185261549}
   - component: {fileID: 1185261552}
   - component: {fileID: 1185261553}
   m_Layer: 0
@@ -37976,14 +37979,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1185261549
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185261548}
-  m_Enabled: 1
 --- !u!20 &1185261550
 Camera:
   m_ObjectHideFlags: 0
@@ -40682,6 +40677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ModsSpawner
   objectsToSpawn:
   - {fileID: 1915482812757422117, guid: 8365e79c12088ec48afd719ba38ffd94, type: 3}
+  - {fileID: 1915482812757422117, guid: c75a1919003ddd349bb5d811e517dbe8, type: 3}
   spawnPoints:
   - {fileID: 1198197612}
   - {fileID: 1047077128}

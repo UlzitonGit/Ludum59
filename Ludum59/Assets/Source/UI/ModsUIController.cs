@@ -12,6 +12,7 @@ public class ModsUIController : MonoBehaviour
     
     public void SpawnRandomObjects()
     {
+        cardsUsed = 0;
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             GameObject randomPrefab = GetRandomObject();
