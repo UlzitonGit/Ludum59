@@ -12,8 +12,11 @@ public class EnemyController : MonoBehaviour
     private TurnsController _turnController;
     public void StartMovement(TurnsController turnController)
     {
-        StartCoroutine(MoveCharacterDelay());
-        this._turnController = turnController;
+        if (gameObject.activeInHierarchy)
+        {
+            StartCoroutine(MoveCharacterDelay());
+            this._turnController = turnController;   
+        }
     }
     IEnumerator MoveCharacterDelay()
     {

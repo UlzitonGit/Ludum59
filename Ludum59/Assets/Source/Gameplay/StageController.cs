@@ -9,6 +9,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private ModsUIController modsUIController;
     [SerializeField] private PlayerManager playerManager;
     [SerializeField] private GeneralEnemyManager enemyManager;
+    [SerializeField] private int stageEnemyAdd;
     [SerializeField] private Transform player;
     private Vector3 pos;
     private int stageCount = 0;
@@ -23,6 +24,10 @@ public class StageController : MonoBehaviour
     public void StartNewStage()
     {
         stageCount++;
+        if (stageCount % stageEnemyAdd == 0)
+        {
+            enemyManager.SetEnemyCount(1);
+        }
         player.position = pos;
         enemyManager.Initialize(this);
         modsUIController.SpawnRandomObjects();

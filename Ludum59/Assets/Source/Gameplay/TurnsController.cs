@@ -75,4 +75,9 @@ public class TurnsController : MonoBehaviour
         _turnsText.text = "TURN " + turnCount.ToString();
         allActionObjects = 0;
     }
+
+    public void SetAllActionObjects(int amount)
+    {
+        allActionObjects += amount;
+    }
 }

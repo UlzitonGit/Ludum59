@@ -216,6 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 5
   enemyUI: {fileID: 7642221774582675502}
+  enemyController: {fileID: 5117622365174459026}
 --- !u!1 &2200473988909894804
 GameObject:
   m_ObjectHideFlags: 0
