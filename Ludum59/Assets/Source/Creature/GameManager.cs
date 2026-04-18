@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private CreatureMovement _player;
     [SerializeField] private MoveUIList _moveList;
     [SerializeField] private TurnsController _turnsController;
+    [SerializeField] private PlayerModulesController playerModulesController;
     private List<string> turns = new List<string>();
 
     private void Start()
@@ -40,6 +41,7 @@ public class PlayerManager : MonoBehaviour
         {
             yield return new WaitForSeconds(_moveDelay);
             _player.SetDirection(turn);
+            playerModulesController.ReloadModule();
         }
         _turnsController.ActionsPerformed();
     }

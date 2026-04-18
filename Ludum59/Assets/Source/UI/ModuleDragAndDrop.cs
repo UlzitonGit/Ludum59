@@ -1,0 +1,81 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class ModuleDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+{
+    [SerializeField] private ModuleInfo modulePrefab;
+    private Vector3 startPosition;
+    private Transform startParent;
+    private CanvasGroup canvasGroup;
+    private Canvas canvas;
+
+    void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        
+        canvas = GetComponentInParent<Canvas>();
+    }
+
+    void Start()
+    {
+        startPosition = transform.position;
+        startParent = transform.parent;
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        startPosition = transform.position;
+        startParent = transform.parent;
+        
+        canvasGroup.alpha = 0.6f;
+        canvasGroup.blocksRaycasts = false;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = Input.mousePosition;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+        
+        GameObject dropZone = GetDropZone(eventData);
+        
+        if (dropZone != null && dropZone.CompareTag("DropZone"))
+        {
+            DropZone zone = dropZone.GetComponent<DropZone>();
+            if (zone != null)
+            {
+                zone.OnObjectDropped(modulePrefab);
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            ReturnToStart();
+        }
+    }
+
+    private GameObject GetDropZone(PointerEventData eventData)
+    {
+        var raycastResults = new System.Collections.Generic.List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, raycastResults);
+        
+        foreach (var hit in raycastResults)
+        {
+            if (hit.gameObject.CompareTag("DropZone"))
+                return hit.gameObject;
+        }
+        return null;
+    }
+
+    private void ReturnToStart()
+    {
+        transform.position = startPosition;
+        transform.SetParent(startParent);
+    }
+}

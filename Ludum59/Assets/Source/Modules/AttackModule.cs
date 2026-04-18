@@ -1,16 +1,17 @@
-using System;
 using UnityEngine;
 
-public class PolarAttack : Modul
+public class AttackModule : Modul
 {
-    [SerializeField] private ParticleSystem _polar;
+    private GridData _points;
+    [SerializeField] private GameObject _attack;
     [SerializeField] private float _radius;
     [SerializeField] private LayerMask _mask;
     [SerializeField] private Modul _nextModulInCombo;
     private void Start()
     {
-        turnsToPrepare = 8;
+        turnsToPrepare = 1;
         curentTurn = turnsToPrepare;
+        _points = FindAnyObjectByType<GridData>();
     }
 
     public override bool Prepare()
@@ -25,9 +26,10 @@ public class PolarAttack : Modul
 
     public override void Perform(Vector3 pos)
     {
-        _polar.Play();
-        print("Attack");
-        Collider[] hitColliders = Physics.OverlapSphere( transform.position, _radius, _mask);
+        Transform currentPoint =_points._grid[Random.Range(0, _points._grid.Length)];
+        Vector3 curPosition = new Vector3(currentPoint.position.x, 1,currentPoint.position.z);
+        Instantiate(_attack, curPosition, Quaternion.identity);
+        Collider[] hitColliders = Physics.OverlapSphere(curPosition, _radius, _mask);
         if (hitColliders.Length > 0)
         {
             hitColliders[0].GetComponent<IDamagable>().GetDamage(damage);
@@ -42,6 +44,6 @@ public class PolarAttack : Modul
 
     public override void SetChildModule(Modul module)
     {
-        throw new NotImplementedException();
+        _nextModulInCombo = module;
     }
 }

@@ -1,16 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour, IDamagable
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int health;
+    [SerializeField] private PlayerUI playerUI;
 
-    // Update is called once per frame
-    void Update()
+    public void GetDamage(int damage)
     {
-        
+        health -= damage;
+        playerUI.UpdateUI(health);
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }
