@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] List<string> turns = new List<string>();
     [SerializeField] private float _moveDelay;
     [SerializeField] private int _moveCount;
+    [SerializeField] private EnemyAttackController enemyAttack;
     private TurnsController _turnController;
     public void StartMovement(TurnsController turnController)
     {
@@ -20,6 +21,7 @@ public class EnemyController : MonoBehaviour
         {
             yield return new WaitForSeconds(_moveDelay);
             movement.SetDirection(turns[Random.Range(0, turns.Count)]);
+            enemyAttack.ReloadModule();
         }
         _turnController.ActionsPerformed();
     }
