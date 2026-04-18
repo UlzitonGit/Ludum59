@@ -26,7 +26,7 @@ public class AttackModule : Modul
 
     public override void Perform(Vector3 pos)
     {
-        Transform currentPoint =_points._grid[Random.Range(0, _points._grid.Length)];
+        Transform currentPoint =_points._grid[Random.Range(0, _points._grid.Length - 1)];
         Vector3 curPosition = new Vector3(currentPoint.position.x, 1,currentPoint.position.z);
         Instantiate(_attack, curPosition, Quaternion.identity);
         Collider[] hitColliders = Physics.OverlapSphere(curPosition, _radius, _mask);
