@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private PlayerModulesController playerModulesController;
     private List<string> turns = new List<string>();
 
-    private void Start()
+    public void AddToTurns()
     {
         _turnsController.InitActionObjects();
     }

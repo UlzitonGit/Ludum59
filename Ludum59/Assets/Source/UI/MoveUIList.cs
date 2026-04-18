@@ -11,7 +11,7 @@ public class MoveUIList : MonoBehaviour
     [SerializeField] private GameObject _moveDown;
     [SerializeField] private GameObject _startButton;
     [SerializeField] private PlayerManager _playerManager;
-    
+    [SerializeField] private TurnsController _turnsController;
     
     [SerializeField]  private List<GameObject> _movesUI = new List<GameObject>();
     private int _moveCount;
@@ -32,7 +32,8 @@ public class MoveUIList : MonoBehaviour
         _moveCount++;
         if (_moveCount == 5)
         {
-            _startButton.SetActive(true);
+            _turnsController.PathDone = true;
+            _turnsController.TurnReadyCheck();
         }
     }
 
@@ -44,7 +45,8 @@ public class MoveUIList : MonoBehaviour
         Destroy(toDestroy);
         _playerManager.RemoveMove(index);
         _moveCount--;
-        _startButton.SetActive(false);
+        _turnsController.PathDone = false;
+        _turnsController.TurnReadyCheck();
         if(_moveCount == 0) return;
         for (int i = 0; i != _moveCount; i++)
         {

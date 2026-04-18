@@ -9,10 +9,24 @@ public class TurnsController : MonoBehaviour
     [SerializeField] private PlayerManager _playerManager;
     [SerializeField] private MoveUIList _movesUI;
     [SerializeField] private TextMeshProUGUI _turnsText;
+    public bool PathDone;
+    public bool CardsUsed;
     private int allActionObjects;
     private int currentActionObjects;
     private int turnCount;
 
+
+    public void TurnReadyCheck()
+    {
+        if (PathDone && CardsUsed)
+        {
+            _turnButton.SetActive(true);
+        }
+        else
+        {
+            _turnButton.SetActive(false);
+        }
+    }
     public void InitActionObjects()
     {
         allActionObjects++;

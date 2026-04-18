@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackModule
   turnsToPrepare: 1
-  damage: 2
+  damage: 3
   _attack: {fileID: 376663339049322997, guid: 450a11155ae08f14d81ab0d184890233, type: 3}
   _radius: 1
   _mask:

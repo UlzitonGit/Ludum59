@@ -7,7 +7,7 @@ public class AttackModule : Modul
     [SerializeField] private float _radius;
     [SerializeField] private LayerMask _mask;
     [SerializeField] private Modul _nextModulInCombo;
-    private void Start()
+    private void OnEnable()
     {
         turnsToPrepare = 1;
         curentTurn = turnsToPrepare;

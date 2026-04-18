@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class ModuleDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private ModuleInfo modulePrefab;
+    private ModsUIController modsUIController;
     private Vector3 startPosition;
     private Transform startParent;
     private CanvasGroup canvasGroup;
@@ -14,7 +15,7 @@ public class ModuleDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler,
         canvasGroup = GetComponent<CanvasGroup>();
         if (canvasGroup == null)
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
-        
+        modsUIController = FindAnyObjectByType<ModsUIController>();
         canvas = GetComponentInParent<Canvas>();
     }
 
@@ -52,6 +53,7 @@ public class ModuleDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler,
             {
                 zone.OnObjectDropped(modulePrefab);
                 Destroy(gameObject);
+                modsUIController.AddUsedCards();
             }
         }
         else

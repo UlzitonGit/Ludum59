@@ -1,14 +1,19 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GeneralEnemyManager : MonoBehaviour
 {
-    [SerializeField] private EnemyController[] enemies;
+    [SerializeField] private GridData _gridData;
+    [SerializeField] private EnemyController[] enemiesPrefabs;
     [SerializeField] private TurnsController playerTurns;
+    private List<EnemyController> enemies = new List<EnemyController>();
 
-    private void Start()
+    public void Initialize()
     {
-        for (int i = 0; i < enemies.Length; i++)
+        enemies.Add(Instantiate(enemiesPrefabs[Random.Range(0, enemiesPrefabs.Length)], _gridData._grid[57].transform.position, Quaternion.identity));
+        for (int i = 0; i < enemies.Count; i++)
         {
             playerTurns.InitActionObjects();
         }

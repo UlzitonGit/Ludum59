@@ -1,16 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ModsSpawner : MonoBehaviour
+public class ModsUIController : MonoBehaviour
 {
     [SerializeField] private List<GameObject> objectsToSpawn;
     [SerializeField] private Transform[] spawnPoints;
-    
-    
-    private void Start()
-    {
-        SpawnRandomObjects();
-    }
+    [SerializeField] private TurnsController _turnsController;
+    private List<GameObject> spawnedObjects = new List<GameObject>();
+    private int cardsUsed;
+  
     
     public void SpawnRandomObjects()
     {
@@ -41,14 +39,29 @@ public class ModsSpawner : MonoBehaviour
         
         GameObject spawnedObject = Instantiate(prefab, point);
         spawnedObject.transform.localPosition = spawnPosition;
+        spawnedObjects.Add(spawnedObject);
  
+    }
+    public void AddUsedCards()
+    {
+        cardsUsed++;
+        if (cardsUsed == 2)
+        {
+            ClearSpawnedObjects();
+        }
     }
     
     public void ClearSpawnedObjects()
     {
-        for (int i = transform.childCount - 1; i >= 0; i--)
+        for (int i = spawnedObjects.Count - 1; i >= 0; i--)
         {
-            Destroy(transform.GetChild(i).gameObject);
+            if (spawnedObjects[i] != null)
+            {
+                Destroy(spawnedObjects[i]);
+            }
         }
+        spawnedObjects.Clear();
+        _turnsController.CardsUsed = true;
+        _turnsController.TurnReadyCheck();
     }
 }
