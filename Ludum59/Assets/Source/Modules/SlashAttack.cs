@@ -37,7 +37,7 @@ public class SlashAttack : MonoBehaviour
 
     IEnumerator PerformDestroy()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }
 }

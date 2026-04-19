@@ -6,7 +6,7 @@ public class CreatureMovement : MonoBehaviour
     [SerializeField] public GridData _gridData;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private Transform _checkPos;
-    
+    [SerializeField] private Transform _shipTransform;
     [SerializeField] private float _moveDuration = 0.2f;
     private string lastMove;
     private bool _isMoving = false;
@@ -24,6 +24,7 @@ public class CreatureMovement : MonoBehaviour
         if(direction == _moves.right)  TryMove(new Vector3(_gridData._cellSize, 0, 0));
         if(direction == _moves.up)  TryMove(new Vector3(0, 0, _gridData._cellSize));
         if(direction == _moves.down)  TryMove(new Vector3(0, 0, -_gridData._cellSize));
+        RotateShip(direction);
         lastMove = direction;
     }
     private void Start()
@@ -64,6 +65,14 @@ public class CreatureMovement : MonoBehaviour
         
         transform.position = target;
         _isMoving = false;
+    }
+
+    private void RotateShip(string direction)
+    {
+        if(direction == _moves.left) _shipTransform.rotation = Quaternion.Euler(0, 180, 0);
+        if(direction == _moves.right)  _shipTransform.rotation = Quaternion.Euler(0, 0, 0);
+        if(direction == _moves.up)  _shipTransform.rotation = Quaternion.Euler(0, -90, 0);
+        if(direction == _moves.down) _shipTransform.rotation = Quaternion.Euler(0, 90, 0);
     }
 
     public string GetLastMove()
