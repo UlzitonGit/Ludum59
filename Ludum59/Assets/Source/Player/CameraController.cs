@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
+    [SerializeField] private Transform middlePos;
     [SerializeField] private Transform[] points;
     [SerializeField] private float lerpSpeed;
     [SerializeField] private float _moveDuration = 0.2f;
@@ -30,14 +31,14 @@ public class CameraController : MonoBehaviour
 
     private void SmoothMoveScreen(InputAction.CallbackContext obj)
     {
-        StartCoroutine(SmoothMoving(points[0].position));
+        StartCoroutine(SmoothMoving(points[0].position, points[0].rotation));
     }
     private void SmoothMoveCards(InputAction.CallbackContext obj)
     {
-        StartCoroutine(SmoothMoving(points[1].position));
+        StartCoroutine(SmoothMoving(points[1].position, points[1].rotation));
     }
 
-    private IEnumerator SmoothMoving(Vector3 target)
+    private IEnumerator SmoothMoving(Vector3 target, Quaternion targetRot)
     {
         _isMoving = true;
         Vector3 start = transform.position;
@@ -46,7 +47,19 @@ public class CameraController : MonoBehaviour
         while (elapsed < _moveDuration)
         {
             float t = elapsed / _moveDuration;
+            transform.position = Vector3.Lerp(start, middlePos.position, t);
+            transform.rotation = Quaternion.Slerp(transform.rotation,  middlePos.rotation, t);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        start = transform.position;
+        elapsed = 0f;
+        
+        while (elapsed < _moveDuration)
+        {
+            float t = elapsed / _moveDuration;
             transform.position = Vector3.Lerp(start, target, t);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, t);
             elapsed += Time.deltaTime;
             yield return null;
         }
