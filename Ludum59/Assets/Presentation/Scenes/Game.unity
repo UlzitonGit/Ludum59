@@ -17871,6 +17871,7 @@ MonoBehaviour:
   enemiesPrefabs:
   - {fileID: 5117622365174459026, guid: df257f5cc2565ac41bbf80f94699ad27, type: 3}
   - {fileID: 5117622365174459026, guid: 398915ebbd5002d41a40331458287667, type: 3}
+  - {fileID: 5117622365174459026, guid: 68f18d63842e9414fb94404cbe1c8f1e, type: 3}
   playerTurns: {fileID: 501451388}
   enemiesCount: 1
   enemiesAlive: 0
@@ -47539,13 +47540,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686563353}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.49999276, y: 0.0046737157, z: -0.0026933437, w: 0.8660128}
-  m_LocalPosition: {x: 3.94, y: 13.76, z: 88.89}
+  m_LocalRotation: {x: 0.0000075407324, y: 0.8660254, z: -0.5, w: 0.0000043536443}
+  m_LocalPosition: {x: 2.61, y: 13.76, z: 105.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 60, y: 0.619, z: 0.001}
+  m_LocalEulerAnglesHint: {x: 60, y: 180, z: 0.001}
 --- !u!1 &1710559987
 GameObject:
   m_ObjectHideFlags: 0
