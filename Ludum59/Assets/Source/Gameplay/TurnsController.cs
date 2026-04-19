@@ -14,6 +14,7 @@ public class TurnsController : MonoBehaviour
     [SerializeField] private StageController _stage;
     public bool PathDone;
     public bool CardsUsed;
+    private bool turnActive;
     private int allActionObjects;
     public int currentActionObjects;
     private int turnCount;
@@ -41,6 +42,7 @@ public class TurnsController : MonoBehaviour
         _turnButton.SetActive(false);
         _enemyManager.StartAction();
         _playerManager.Move();
+        turnActive = true;
         turnCount++;
         _turnsText.text = "TURN " + turnCount.ToString();
     }
@@ -57,6 +59,7 @@ public class TurnsController : MonoBehaviour
     private void EndTurn()
     {
         StartCoroutine(TurnEnd());
+        turnActive = false;
     }
 
     IEnumerator TurnEnd()
@@ -79,5 +82,10 @@ public class TurnsController : MonoBehaviour
     public void SetAllActionObjects(int amount)
     {
         allActionObjects += amount;
+    }
+
+    public bool GetTurnActive()
+    {
+        return turnActive;
     }
 }

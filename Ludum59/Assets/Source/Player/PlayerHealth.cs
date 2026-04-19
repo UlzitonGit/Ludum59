@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 {
     [SerializeField] private int health;
     [SerializeField] private PlayerUI playerUI;
+    private bool isDefend;
     private int currentHealth;
 
     private void Start()
@@ -15,6 +16,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     public void GetDamage(int damage)
     {
+        if (isDefend) damage = damage / 3;
         currentHealth -= damage;
         playerUI.UpdateUI(currentHealth);
         if (currentHealth <= 0)
@@ -28,5 +30,21 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         if(currentHealth + heal > health) return;
         currentHealth += heal;
         playerUI.UpdateUI(currentHealth);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Shield"))
+        {
+            isDefend = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Shield"))
+        {
+            isDefend = false;
+        }
     }
 }

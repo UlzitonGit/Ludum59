@@ -18634,7 +18634,7 @@ MonoBehaviour:
   modsUIController: {fileID: 1467865851}
   playerManager: {fileID: 359537672}
   enemyManager: {fileID: 388365983}
-  stageEnemyAdd: 3
+  stageEnemyAdd: 2
   player: {fileID: 359537670}
   _trashCleaner: {fileID: 553115985}
   allEnemiesDead: 0
@@ -41089,8 +41089,11 @@ MonoBehaviour:
   - {fileID: 1915482812757422117, guid: 3792b915afdfd524fa51e6bfb9475806, type: 3}
   - {fileID: 1915482812757422117, guid: 36a0fed721bc09a41a127f018120d504, type: 3}
   - {fileID: 1915482812757422117, guid: 2e493d99206e9c740b4ce21bea715f91, type: 3}
-  - {fileID: 1915482812757422117, guid: 2e493d99206e9c740b4ce21bea715f91, type: 3}
-  - {fileID: 1915482812757422117, guid: 2e493d99206e9c740b4ce21bea715f91, type: 3}
+  - {fileID: 1915482812757422117, guid: e1e248db85d0385498a2e3aad46f8927, type: 3}
+  - {fileID: 1915482812757422117, guid: e1e248db85d0385498a2e3aad46f8927, type: 3}
+  - {fileID: 1915482812757422117, guid: e1e248db85d0385498a2e3aad46f8927, type: 3}
+  - {fileID: 1915482812757422117, guid: e1e248db85d0385498a2e3aad46f8927, type: 3}
+  - {fileID: 1915482812757422117, guid: e1e248db85d0385498a2e3aad46f8927, type: 3}
   spawnPoints:
   - {fileID: 1198197612}
   - {fileID: 1047077128}
