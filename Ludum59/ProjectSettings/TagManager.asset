@@ -7,6 +7,7 @@ TagManager:
   - Cell
   - Obstacles
   - DropZone
+  - Enemy
   layers:
   - Default
   - TransparentFX

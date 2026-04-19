@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 282567827295963210}
-  - component: {fileID: 4598227373609303972}
+  - component: {fileID: 6262924205661812302}
   m_Layer: 3
-  m_Name: AttackModule
+  m_Name: Speedfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4598227373609303972
+--- !u!114 &6262924205661812302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,14 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 695111008756657596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b697b623602d4fb469c13a878f29bed3, type: 3}
+  m_Script: {fileID: 11500000, guid: bf5f28d4d2e0fe24db64671d83f54a9f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AttackModule
-  turnsToPrepare: 2
-  damage: 2
-  _attack: {fileID: 376663339049322997, guid: 450a11155ae08f14d81ab0d184890233, type: 3}
-  _radius: 1.5
-  _mask:
-    serializedVersion: 2
-    m_Bits: 64
+  m_EditorClassIdentifier: Assembly-CSharp::SpeedFire
+  turnsToPrepare: 1
+  damage: 1
+  _attack: {fileID: 8156121855285217010, guid: ee3f524098336e4409b9036e230876cf, type: 3}
+  tag: Enemy
   _nextModulInCombo: {fileID: 0}

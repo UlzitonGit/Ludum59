@@ -9,7 +9,6 @@ public class AttackModule : Modul
     [SerializeField] private Modul _nextModulInCombo;
     private void OnEnable()
     {
-        turnsToPrepare = 1;
         curentTurn = turnsToPrepare;
         _points = FindAnyObjectByType<GridData>();
     }
