@@ -8,7 +8,7 @@ public class CreatureMovement : MonoBehaviour
     [SerializeField] private Transform _checkPos;
     
     [SerializeField] private float _moveDuration = 0.2f;
-    
+    private string lastMove;
     private bool _isMoving = false;
     private float _startY;
     MovesData _moves;
@@ -24,6 +24,7 @@ public class CreatureMovement : MonoBehaviour
         if(direction == _moves.right)  TryMove(new Vector3(_gridData._cellSize, 0, 0));
         if(direction == _moves.up)  TryMove(new Vector3(0, 0, _gridData._cellSize));
         if(direction == _moves.down)  TryMove(new Vector3(0, 0, -_gridData._cellSize));
+        lastMove = direction;
     }
     private void Start()
     {
@@ -63,5 +64,10 @@ public class CreatureMovement : MonoBehaviour
         
         transform.position = target;
         _isMoving = false;
+    }
+
+    public string GetLastMove()
+    {
+        return lastMove;
     }
 }

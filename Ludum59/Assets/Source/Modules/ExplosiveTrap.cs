@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ExplosiveTrap : MonoBehaviour
+public class ExplosiveTrap : MonoBehaviour, IClearable
 {
     [SerializeField] private GameObject _vfx;
     private Trap _trap;
@@ -22,7 +22,12 @@ public class ExplosiveTrap : MonoBehaviour
             other.GetComponent<IDamagable>().GetDamage(damage);
             Instantiate(_vfx, this.transform.position, Quaternion.identity);
             _trap.PerformCombo(transform.position);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+    }
+
+    public void ClearTrash()
+    {
+        Destroy(this.gameObject);
     }
 }

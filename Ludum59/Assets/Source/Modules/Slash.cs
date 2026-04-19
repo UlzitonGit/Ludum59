@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class Trap : Modul
+public class Slash : Modul
 {
-    [SerializeField] private GameObject _attack;
+    [SerializeField] private SlashAttack _Slash;
     [SerializeField] private string tag;
     [SerializeField] private Modul _nextModulInCombo;
-    private TrashCleaner _trashCleaner;
-    private void OnEnable()
+
+    private void Start()
     {
         curentTurn = turnsToPrepare;
-        _trashCleaner = FindAnyObjectByType<TrashCleaner>();
+ 
     }
 
     public override bool Prepare()
@@ -25,17 +25,14 @@ public class Trap : Modul
     public override void Perform(Vector3 pos)
     {
         if(pos == Vector3.zero) pos = transform.position;
-        ExplosiveTrap trap = Instantiate(_attack, pos, Quaternion.identity).GetComponent<ExplosiveTrap>();
-        trap.Init(tag, damage, this);
+        SlashAttack currentAttack = Instantiate(_Slash.gameObject, pos, Quaternion.identity).GetComponent<SlashAttack>();
+        currentAttack.Initialize(damage, tag);
         curentTurn = turnsToPrepare;
-    }
-
-    public void PerformCombo(Vector3 pos)
-    {
         if (_nextModulInCombo != null)
         {
-            _nextModulInCombo.Perform(pos);
+            _nextModulInCombo.Perform(transform.position);
         }
+        curentTurn = turnsToPrepare;
     }
 
     public override void SetChildModule(Modul module)

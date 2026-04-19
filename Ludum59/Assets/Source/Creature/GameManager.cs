@@ -45,4 +45,9 @@ public class PlayerManager : MonoBehaviour
         }
         _turnsController.ActionsPerformed();
     }
+
+    public CreatureMovement GetMovement()
+    {
+        return _player;
+    }
 }

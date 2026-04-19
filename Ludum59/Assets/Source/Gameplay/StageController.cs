@@ -11,6 +11,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private GeneralEnemyManager enemyManager;
     [SerializeField] private int stageEnemyAdd;
     [SerializeField] private Transform player;
+    [SerializeField] private TrashCleaner _trashCleaner;
     private Vector3 pos;
     private int stageCount = 0;
     public bool allEnemiesDead = false;
@@ -49,6 +50,7 @@ public class StageController : MonoBehaviour
         print("Checking stage state");
         if (allEnemiesDead)
         {
+            _trashCleaner.ClearTrash();
             turnsController.EndStage();
             print("started");
             StartNewStage();

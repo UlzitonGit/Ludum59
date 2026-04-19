@@ -18636,6 +18636,7 @@ MonoBehaviour:
   enemyManager: {fileID: 388365983}
   stageEnemyAdd: 3
   player: {fileID: 359537670}
+  _trashCleaner: {fileID: 553115985}
   allEnemiesDead: 0
 --- !u!1 &478511667
 GameObject:
@@ -23947,6 +23948,50 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.6667, y: -0.97331, z: 95.93544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &553115984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553115986}
+  - component: {fileID: 553115985}
+  m_Layer: 0
+  m_Name: TrashCleaner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &553115985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553115984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aac3d7808d61e744ae0ccc7ff979405, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashCleaner
+--- !u!4 &553115986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553115984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.06316, y: 3.55917, z: 87.92259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41043,6 +41088,9 @@ MonoBehaviour:
   - {fileID: 1915482812757422117, guid: f1bcc7a609aa3134b89ea38adeffc889, type: 3}
   - {fileID: 1915482812757422117, guid: 3792b915afdfd524fa51e6bfb9475806, type: 3}
   - {fileID: 1915482812757422117, guid: 36a0fed721bc09a41a127f018120d504, type: 3}
+  - {fileID: 1915482812757422117, guid: 2e493d99206e9c740b4ce21bea715f91, type: 3}
+  - {fileID: 1915482812757422117, guid: 2e493d99206e9c740b4ce21bea715f91, type: 3}
+  - {fileID: 1915482812757422117, guid: 2e493d99206e9c740b4ce21bea715f91, type: 3}
   spawnPoints:
   - {fileID: 1198197612}
   - {fileID: 1047077128}
@@ -58576,3 +58624,4 @@ SceneRoots:
   - {fileID: 467251043}
   - {fileID: 81023879}
   - {fileID: 71978122}
+  - {fileID: 553115986}
