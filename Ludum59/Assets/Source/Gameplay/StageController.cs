@@ -6,7 +6,7 @@ public class StageController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TurnsController turnsController;
-    [SerializeField] private ModsUIController modsUIController;
+    [SerializeField] private ChipSpawnController modsUIController;
     [SerializeField] private PlayerManager playerManager;
     [SerializeField] private GeneralEnemyManager enemyManager;
     [SerializeField] private int stageEnemyAdd;
@@ -31,7 +31,7 @@ public class StageController : MonoBehaviour
         }
         player.position = pos;
         enemyManager.Initialize(this);
-        modsUIController.SpawnRandomObjects();
+        modsUIController.Spawn();
         turnsController.CardsUsed = false;
         turnsController.PathDone = false;
         turnsController.TurnReadyCheck();

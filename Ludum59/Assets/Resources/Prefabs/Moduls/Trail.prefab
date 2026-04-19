@@ -5021,4 +5021,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b6497256f0b5b46a34faf6499084d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Trail
-  damage: 3
+  damage: 1

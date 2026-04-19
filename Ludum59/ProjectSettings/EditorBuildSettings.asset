@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Presentation/Scenes/Menu.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Presentation/Scenes/CutScene.unity
+    guid: f907b37cef83e4b45b5f9feeb5808987
+  - enabled: 1
     path: Assets/Presentation/Scenes/Game.unity
     guid: 613bc667bf9e5dc4b88ba05f14548b15
   m_configObjects:

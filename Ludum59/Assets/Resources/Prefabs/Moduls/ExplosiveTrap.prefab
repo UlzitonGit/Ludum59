@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6468098262914933536}
   - component: {fileID: 2031222824177018817}
   - component: {fileID: 5829828271096813111}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ExplosiveTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
