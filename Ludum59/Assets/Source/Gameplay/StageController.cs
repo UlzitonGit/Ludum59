@@ -58,7 +58,7 @@ public class StageController : MonoBehaviour
     IEnumerator End()
     {
         animator.SetTrigger("Close");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(3);
     }
 

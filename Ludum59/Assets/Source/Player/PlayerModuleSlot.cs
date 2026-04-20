@@ -57,7 +57,7 @@ public class PlayerModuleSlot : MonoBehaviour
      private void SetThirdModule(Modul thirdModule)
      {
           if(this.thirdModule != null) return;
-          this.thirdModule =  Instantiate(secondModule.gameObject, transform).GetComponent<Modul>();
+          this.thirdModule =  Instantiate(thirdModule.gameObject, transform).GetComponent<Modul>();
           secondModule.SetChildModule(this.thirdModule);
      }
 

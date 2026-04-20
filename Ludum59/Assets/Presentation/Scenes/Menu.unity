@@ -7123,6 +7123,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5399640358429503170, guid: 882b5e350b396a145a74b46e7d12046a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 82b27e3b73099be44bc308b5633418fe, type: 3}
     - target: {fileID: 5411492619217866402, guid: 882b5e350b396a145a74b46e7d12046a, type: 3}
       propertyPath: m_Name
       value: Menu
