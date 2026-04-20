@@ -162,6 +162,7 @@ MonoBehaviour:
   health: 5
   enemyUI: {fileID: 7642221774582675502}
   enemyController: {fileID: 5117622365174459026}
+  deathVFX: {fileID: 8391579247969066050, guid: cc2c20741b886674f96f896c0261822d, type: 3}
 --- !u!1 &2132883242109262433
 GameObject:
   m_ObjectHideFlags: 0

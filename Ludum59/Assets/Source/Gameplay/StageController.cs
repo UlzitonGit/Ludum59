@@ -43,7 +43,7 @@ public class StageController : MonoBehaviour
         playerManager.AddToTurns();
         _text.text = "STAGE " + stageCount.ToString();
         allEnemiesDead = false;
-        if (stageCount > 3)
+        if (stageCount > 4)
         {
             StartCoroutine(End());
         }
