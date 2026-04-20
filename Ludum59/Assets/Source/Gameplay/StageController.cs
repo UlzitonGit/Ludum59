@@ -69,6 +69,8 @@ public class StageController : MonoBehaviour
             _trashCleaner.ClearTrash();
             turnsController.EndStage();
             print("started");
+            TutorialController.Instance.SwitchPanel(23);
+            TutorialController.Instance.CanMoveScreen = true;
             StartNewStage();
             //turnsController.InitActionObjects();
         }

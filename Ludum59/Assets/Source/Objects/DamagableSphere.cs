@@ -1,14 +1,19 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class DamagableSphere : MonoBehaviour
 {
+    [SerializeField] private int lifeSpan;
     [SerializeField] private TurnsController turnsController;
     [SerializeField] private GridData grid;
+    private int currentSpan;
     public void Init()
     {
         TeleportOnRandomPosition();
+        currentSpan = lifeSpan;
+        StartCoroutine(ShieldLifeSpan());
     }
 
     private void TeleportOnRandomPosition()
@@ -22,11 +27,24 @@ public class DamagableSphere : MonoBehaviour
         if (other.CompareTag("Player") && turnsController.GetTurnActive())
         {
             TeleportOnRandomPosition();
-            EnemyHealth[] enemy = FindObjectsByType<EnemyHealth>(FindObjectsSortMode.None);
-            foreach (var enemyController in enemy)
+            EnemyHealth enemy = FindFirstObjectByType<EnemyHealth>();
+            if(enemy !=null)
+                enemy.GetDamage(2);
+            
+        }
+    }
+    IEnumerator ShieldLifeSpan()
+    {
+        yield return new WaitForSeconds(1);
+        if (turnsController.GetTurnActive())
+        {
+            currentSpan--;
+            if (currentSpan == 0)
             {
-                enemyController.GetDamage(2);
+                TeleportOnRandomPosition();
+                currentSpan = lifeSpan;
             }
         }
+        StartCoroutine(ShieldLifeSpan());
     }
 }

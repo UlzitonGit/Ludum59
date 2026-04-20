@@ -15,4 +15,12 @@ public class FirstCutscene : MonoBehaviour
         yield return new WaitForSeconds(26f);
         SceneManager.LoadScene(2);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
 }

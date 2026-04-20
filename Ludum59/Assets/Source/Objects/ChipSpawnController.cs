@@ -16,6 +16,7 @@ public class ChipSpawnController : MonoBehaviour
         {
             chips.Add(Instantiate(chipPrefab, spp.position, Quaternion.identity));
         }
+        TutorialController.Instance.ShowHint(2);
     }
 
     public void RemoveChips()
@@ -25,5 +26,6 @@ public class ChipSpawnController : MonoBehaviour
             Destroy(chip.gameObject);
         }
         chips.Clear();
+        TutorialController.Instance.HideHint(2);
     }
 }

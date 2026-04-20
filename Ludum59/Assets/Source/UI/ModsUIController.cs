@@ -13,6 +13,7 @@ public class ModsUIController : MonoBehaviour
     public void SpawnRandomObjects()
     {
         cardsUsed = 0;
+        TutorialController.Instance.ShowHint(1);
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             GameObject randomPrefab = GetRandomObject();
@@ -64,5 +65,6 @@ public class ModsUIController : MonoBehaviour
         spawnedObjects.Clear();
         _turnsController.CardsUsed = true;
         _turnsController.TurnReadyCheck();
+        TutorialController.Instance.HideHint(1);
     }
 }

@@ -60,6 +60,19 @@ public class ModuleDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler,
                 zone.OnObjectDropped(modulePrefab);
                 Destroy(gameObject);
                 modsUIController.AddUsedCards();
+                if (TutorialController.Instance.isTutorial)
+                {
+                    if (TutorialController.Instance.cardsPicked == 0)
+                    {
+                        TutorialController.Instance.SwitchPanel(7);
+                        TutorialController.Instance.cardsPicked = 1;
+                    }
+                    else if (TutorialController.Instance.cardsPicked == 1)
+                    {
+                        TutorialController.Instance.SwitchPanel(10);
+                        TutorialController.Instance.cardsPicked = 2;
+                    }
+                }
             }
         }
         else

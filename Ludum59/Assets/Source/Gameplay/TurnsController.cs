@@ -25,9 +25,15 @@ public class TurnsController : MonoBehaviour
         if (PathDone && CardsUsed)
         {
             _turnButton.SetActive(true);
+            TutorialController.Instance.SwitchPanel(19);
+            TutorialController.Instance.HideHint(0);
         }
         else
         {
+            if (CardsUsed)
+            {
+                TutorialController.Instance.ShowHint(0);
+            }
             _turnButton.SetActive(false);
         }
     }
@@ -39,6 +45,18 @@ public class TurnsController : MonoBehaviour
 
     public void StartTurn()
     {
+        if(turnActive) return;
+        if (TutorialController.Instance.ScreenMoveCount == 1)
+        {
+            TutorialController.Instance.SwitchPanel(22);
+            TutorialController.Instance.ScreenMoveCount = 2;
+            print("Screen move2");
+        }
+        if (TutorialController.Instance.ScreenMoveCount == 0)
+        {
+            TutorialController.Instance.SwitchPanel(20);
+            TutorialController.Instance.ScreenMoveCount = 1;
+        }
         _turnButton.SetActive(false);
         _enemyManager.StartAction();
         _playerManager.Move();
@@ -64,6 +82,7 @@ public class TurnsController : MonoBehaviour
     IEnumerator TurnEnd()
     {
         turnActive = false;
+        TutorialController.Instance.SwitchPanel(21);
         for (int i = 0; i < 5; i++)
         {
             _movesUI.RemoveMove(0);
