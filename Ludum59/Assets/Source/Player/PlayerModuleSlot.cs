@@ -39,7 +39,7 @@ public class PlayerModuleSlot : MonoBehaviour
           this.firstModule = Instantiate(firstModule.gameObject, transform).GetComponent<Modul>();
           if (secondModule != null)
           {
-               firstModule.SetChildModule(this.secondModule);
+               this.firstModule.SetChildModule(this.secondModule);
           }
      }
 
@@ -50,7 +50,7 @@ public class PlayerModuleSlot : MonoBehaviour
           firstModule.SetChildModule(this.secondModule);
           if (thirdModule != null)
           {
-               secondModule.SetChildModule(this.thirdModule);
+               this.secondModule.SetChildModule(this.thirdModule);
           }
      }
 

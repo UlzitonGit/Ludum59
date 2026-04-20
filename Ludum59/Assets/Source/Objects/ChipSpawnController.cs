@@ -12,6 +12,8 @@ public class ChipSpawnController : MonoBehaviour
     public void Spawn()
     {
         button.SetActive(true);
+          
+        AudioManager.Instance.Play("Chips");
         for (int i = 0; i < 3; i++)
         {
             chips.Add(Instantiate(chipPrefab, spp.position, Quaternion.identity));

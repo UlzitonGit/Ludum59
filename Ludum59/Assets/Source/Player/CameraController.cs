@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private InputActionReference gameScreen;
     [SerializeField] private InputActionReference modulesScreen;
     [SerializeField] private InputActionReference collectScreen;
+    
     bool _isMoving = false;
 
     private void Start()
@@ -96,17 +97,7 @@ public class CameraController : MonoBehaviour
             Vector3 start = transform.position;
             float elapsed = 0f;
         
-           // while (elapsed < _moveDuration)
-           // {
-           //     float t = elapsed / _moveDuration;
-           //     transform.position = Vector3.Lerp(start, middlePos.position, t);
-           //     transform.rotation = Quaternion.Slerp(transform.rotation,  middlePos.rotation, t);
-            //    elapsed += Time.deltaTime;
-            //    yield return null;
-            //}
-           // start = transform.position;
-            //elapsed = 0f;
-        
+            AudioManager.Instance.Play("Move");
             while (elapsed < _moveDuration)
             {
                 float t = elapsed / _moveDuration;

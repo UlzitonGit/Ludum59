@@ -16,6 +16,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private TrashCleaner _trashCleaner;
     [SerializeField] private Animator animator;
     [SerializeField] private DamagableSphere damagableSphere;
+    [SerializeField] private int maxStages;
     private Vector3 pos;
     private int stageCount = 0;
     public bool allEnemiesDead = false;
@@ -41,9 +42,9 @@ public class StageController : MonoBehaviour
         turnsController.PathDone = false;
         turnsController.TurnReadyCheck();
         playerManager.AddToTurns();
-        _text.text = "STAGE " + stageCount.ToString();
+        _text.text = "STAGE " + stageCount.ToString() + "/" + maxStages;
         allEnemiesDead = false;
-        if (stageCount > 4)
+        if (stageCount >= maxStages)
         {
             StartCoroutine(End());
         }
