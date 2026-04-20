@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PolarAttack
   turnsToPrepare: 8
-  damage: 3
+  damage: 2
   _polar: {fileID: 4763975039443051234, guid: c6493da85a4805f4eb5f1c669334c25f, type: 3}
   _radius: 4
   _mask:

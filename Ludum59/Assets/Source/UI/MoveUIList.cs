@@ -39,6 +39,7 @@ public class MoveUIList : MonoBehaviour
 
     public void RemoveMove(int index)
     {
+        if(_turnsController.GetTurnActive()) return;
         print(index);
         if(_movesUI[index] == null) return;
         GameObject toDestroy = _movesUI[index];

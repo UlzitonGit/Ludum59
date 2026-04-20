@@ -59,16 +59,16 @@ public class TurnsController : MonoBehaviour
     private void EndTurn()
     {
         StartCoroutine(TurnEnd());
-        turnActive = false;
     }
 
     IEnumerator TurnEnd()
     {
-        yield return new WaitForSeconds(2);
         for (int i = 0; i < 5; i++)
         {
             _movesUI.RemoveMove(0);
         }
+        turnActive = false;
+        yield return new WaitForSeconds(2);
         currentActionObjects = allActionObjects;
         _stage.CheckStageState();
     }

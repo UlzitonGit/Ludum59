@@ -37,6 +37,10 @@ public class PlayerModuleSlot : MonoBehaviour
      {
           if(this.firstModule != null) return;
           this.firstModule = Instantiate(firstModule.gameObject, transform).GetComponent<Modul>();
+          if (secondModule != null)
+          {
+               firstModule.SetChildModule(this.secondModule);
+          }
      }
 
      private void SetSecondModule(Modul secondModule)
@@ -44,6 +48,10 @@ public class PlayerModuleSlot : MonoBehaviour
           if(this.secondModule != null) return;
           this.secondModule = Instantiate(secondModule.gameObject, transform).GetComponent<Modul>();
           firstModule.SetChildModule(this.secondModule);
+          if (thirdModule != null)
+          {
+               secondModule.SetChildModule(this.thirdModule);
+          }
      }
 
      private void SetThirdModule(Modul thirdModule)
@@ -51,5 +59,26 @@ public class PlayerModuleSlot : MonoBehaviour
           if(this.thirdModule != null) return;
           this.thirdModule =  Instantiate(secondModule.gameObject, transform).GetComponent<Modul>();
           secondModule.SetChildModule(this.thirdModule);
+     }
+
+     public void DestroyModule(int index)
+     {
+          if (index == 0)
+          {
+               firstModule = null;
+               print("firstModule destroyed");
+          }
+
+          if (index == 1)
+          {
+               secondModule = null;
+               print("secondMod destroyed");
+          }
+
+          if (index == 2)
+          {
+               thirdModule = null;
+               print("thirdMod destroyed");
+          }
      }
 }

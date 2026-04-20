@@ -41,7 +41,7 @@ public class StageController : MonoBehaviour
         playerManager.AddToTurns();
         _text.text = "STAGE " + stageCount.ToString();
         allEnemiesDead = false;
-        if (stageCount > 1)
+        if (stageCount > 3)
         {
             StartCoroutine(End());
         }
@@ -55,7 +55,7 @@ public class StageController : MonoBehaviour
     IEnumerator End()
     {
         animator.SetTrigger("Close");
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(3);
     }
 
