@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 {
     [SerializeField] private int health;
     [SerializeField] private PlayerUI playerUI;
+    [SerializeField] private GameObject deathBG;
     private bool isDefend;
     private int currentHealth;
 
@@ -21,7 +22,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
         playerUI.UpdateUI(currentHealth);
         if (currentHealth <= 0)
         {
-            SceneManager.LoadScene(0);
+            deathBG.SetActive(true);
         }
     }
 
