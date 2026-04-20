@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageController : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private int stageEnemyAdd;
     [SerializeField] private Transform player;
     [SerializeField] private TrashCleaner _trashCleaner;
+    [SerializeField] private Animator animator;
     private Vector3 pos;
     private int stageCount = 0;
     public bool allEnemiesDead = false;
@@ -38,11 +41,22 @@ public class StageController : MonoBehaviour
         playerManager.AddToTurns();
         _text.text = "STAGE " + stageCount.ToString();
         allEnemiesDead = false;
+        if (stageCount > 1)
+        {
+            StartCoroutine(End());
+        }
     }
 
     public void AllEnemiesDead()
     {
         allEnemiesDead = true;
+    }
+
+    IEnumerator End()
+    {
+        animator.SetTrigger("Close");
+        yield return new WaitForSeconds(0.4f);
+        SceneManager.LoadScene(3);
     }
 
     public void CheckStageState()
