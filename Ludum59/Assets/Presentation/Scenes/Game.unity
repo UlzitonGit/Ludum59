@@ -8159,7 +8159,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212101294}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000016195}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8167,8 +8167,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.6, y: 13.8}
-  m_SizeDelta: {x: 361.2612, y: 50}
+  m_AnchoredPosition: {x: 0.00038338, y: -6.5}
+  m_SizeDelta: {x: 387.56, y: 90.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &212101296
 MonoBehaviour:
@@ -8190,7 +8190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS "S" MAKE PATH AND START TURN
+  m_text: PRESS "S" THEN MAKE A PATH AND START THE NEXT TURN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -8217,14 +8217,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.8
-  m_fontSizeBase: 40.8
+  m_fontSize: 32.8
+  m_fontSizeBase: 32.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14026,7 +14026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DRAG AND DROP ONE CARDS
+  m_text: DRAG AND DROP ONE CARD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -20123,7 +20123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DEFEND ANOMALIES TO SURVIVE!
+  m_text: DESTROY ANOMALIES TO SURVIVE!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -21153,7 +21153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u201COUR COMPANY MISSION TO MAKE YOUR LIFE BETTER! TO THE STARS!\u201D"
+  m_text: "\u201COUR COMPANY MISSION IS TO MAKE YOUR LIFE BETTER! TO THE STARS!\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -21513,7 +21513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: -0.000034332}
+  m_AnchoredPosition: {x: 20, y: 38.5}
   m_SizeDelta: {x: 378.5804, y: 198.0183}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407710960
@@ -21536,7 +21536,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DRAG AND DROP SECOND CARDS TO EMPTY SLOT OR MERDGE WITH FIRST
+  m_text: DRAG AND DROP THE SECOND CARD TO AN EMPTY SLOT OR MERGE WITH THE FIRST
+    ONE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -21954,8 +21955,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GREATE JOB! REPLAY TUTORIAL IF YOU DONT GET SOMETHING OR READ GAME DESCRIPTION
-    ON ITCH OR LUDUM WEBS
+  m_text: GREAT JOB! REPLAY THE TUTORIAL IF YOU DONT GET SOMETHING OR READ THE GAME
+    DESCRIPTION ON ITCH OR LUDUM WEB PAGES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -23367,7 +23368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.0526, y: 15}
+  m_AnchoredPosition: {x: 25.2, y: 15}
   m_SizeDelta: {x: 547.9941, y: 198.0183}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487407253
@@ -30864,8 +30865,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u201CWhen you merge cards - ability of first get mixed with added - and
-    get stronger in perspective of fight with space anomalies\u201D"
+  m_text: "\u201CWhen you merge cards - ability of the first one gets mixed with
+    the second - and gets stronger in fights with space anomalies\u201D"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -32049,10 +32050,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'ANOMALY IS DESTROYED, YOU HAVE NEW UPGRADES!
+  m_text: 'THE ANOMALY HAS BEEN DESTROYED, YOU HAVE NEW UPGRADES!
 
-    COLLECT IT IN CHIPS
-    SCREEN BY PRESSING "A"'
+    COLLECT IT
+    IN  THE "CHIPS SCREEN" BY PRESSING "A"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -32079,8 +32080,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.4
-  m_fontSizeBase: 42.4
+  m_fontSize: 37
+  m_fontSizeBase: 37
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -32865,7 +32866,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702753790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0000032391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32873,8 +32874,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.51, y: -103}
-  m_SizeDelta: {x: 381.2797, y: 268.74}
+  m_AnchoredPosition: {x: 18.534, y: 5}
+  m_SizeDelta: {x: 325.7, y: 97.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702753792
 MonoBehaviour:
@@ -32896,7 +32897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY TURNS AND DESTROY ANOMALY
+  m_text: TAKE TURNS AND DESTROY ANOMALIES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -47551,7 +47552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.51, y: 36}
+  m_AnchoredPosition: {x: 20.51, y: -26.66}
   m_SizeDelta: {x: 381.2797, y: 268.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894286125
@@ -47574,7 +47575,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "NOW START FIGHT \nWHEN EVERITHING READY START BUTTON WILL APEARE HERE"
+  m_text: "NOW START THE FIGHT \nWHEN EVERYTHING IS READY THE \"START\" BUTTON WILL
+    APPEAR HERE"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -48050,7 +48052,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905339795}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48058,8 +48060,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: 104}
-  m_SizeDelta: {x: 378.5804, y: 198.0183}
+  m_AnchoredPosition: {x: -18.1, y: 104}
+  m_SizeDelta: {x: 454.7, y: 198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905339797
 MonoBehaviour:
@@ -48081,7 +48083,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: YOU CAN DELETE CARD FROM COMBO BY CLICKING ON ICON IN COMBO LIST
+  m_text: YOU CAN DELETE A CARD FROM THE COMBO BY CLICKING ON AN ICON IN THE COMBO
+    LIST
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -48146,7 +48149,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 40.79724, w: 0}
+  m_margin: {x: 0, y: 0, z: -14.912843, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -55111,9 +55114,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u201CThen choose second card and then you have two ways: to put it on
-    empty slot - or to combine it with your cards in equipment by drug it into existing
-    card\u201D\n\nEXPEREMENT WITH CARDS COMBINATIONS!"
+  m_text: "\u201CChoose the second card and then you have two ways: to put it on
+    an empty slot - or to combine it with your cards in equipment by dragging it
+    into an existing card\u201D\n\nEXPERIMENT WITH CARD COMBINATIONS!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -55360,8 +55363,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SOMETIMES YOU ARE ABLE TO TOUCH PRISM ORB, IT WILL DAMAGE RANDOM ENEMY
-    WHEN YOU OVERLAP IT
+  m_text: SOMETIMES YOU ARE ABLE TO TOUCH A PRISM ORB, IT WILL DAMAGE A RANDOM ENEMY
+    WHEN YOU TOUCH IT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -55388,8 +55391,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46.1
-  m_fontSizeBase: 46.1
+  m_fontSize: 37.7
+  m_fontSizeBase: 37.7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -55542,7 +55545,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081111110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00000080978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55550,7 +55553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.6, y: 13.8}
+  m_AnchoredPosition: {x: 0.00019741, y: 0.00018215}
   m_SizeDelta: {x: 361.2612, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081111112
@@ -55573,7 +55576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS "A" AND COLLECT MODS
+  m_text: PRESS "A" AND COLLECT CHIPS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -55607,8 +55610,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -58177,7 +58180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NOW CREATE A NEW PATH FOR NEW TURN AND START IT
+  m_text: NOW CREATE A NEW PATH FOR THE NEW TURN AND START IT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -68020,7 +68023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS "S" AND MOVE TO FIGHT SCREEN
+  m_text: PRESS "S" AND MOVE TO THE FIGHT SCREEN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -68751,7 +68754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30514372d866dc24682a8924cd4a68a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 519ace3b5535e744e9b22dc27875b16d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -69739,7 +69742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CLICK TO THIS BUTTON TO PICK UP CHIPS
+  m_text: CLICK ON THIS BUTTON TO PICK UP CHIPS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -75554,7 +75557,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: I need to take the chip cards from the dispenser - click directly on them,
-    my hand will not fall off from this.
+    i hope my hand will not fall off.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -75823,7 +75826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.51, y: -103}
+  m_AnchoredPosition: {x: 20.51, y: -113.9}
   m_SizeDelta: {x: 381.2797, y: 268.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1666400653
@@ -75846,7 +75849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WATCH FIRST TURN!
+  m_text: WATCH YOUR FIRST TURN!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
@@ -75873,8 +75876,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.4
-  m_fontSizeBase: 39.4
+  m_fontSize: 29.8
+  m_fontSizeBase: 29.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -84903,9 +84906,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "BEFORE START YOU NEED TO SET YOUR PATH PICK FIVE PATH CARDS FROM THIS
-    LIST, ACTUAL PATH WILL APEAR IN LIST BELOW             \n\n CLICK ON ADDED PIECE
-    OF PATH TO REMOVE IT\n\nADD FIVE PATH PARTS TO CONTINUE"
+  m_text: "BEFORE YOU START YOU NEED TO SET YOUR PATH, PICK FIVE PATH CARDS FROM
+    THIS LIST, AN ACTUAL PATH WILL APEAR IN LIST BELOW             \n\nCLICK ON AN
+    ADDED PIECE OF THE PATH TO REMOVE IT\n\nADD FIVE PATH PARTS TO CONTINUE"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
   m_sharedMaterial: {fileID: 9142882854171817519, guid: c7bf2080641755b429c46b94853fb5c4, type: 2}
