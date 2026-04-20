@@ -63,11 +63,11 @@ public class TurnsController : MonoBehaviour
 
     IEnumerator TurnEnd()
     {
+        turnActive = false;
         for (int i = 0; i < 5; i++)
         {
             _movesUI.RemoveMove(0);
         }
-        turnActive = false;
         yield return new WaitForSeconds(2);
         currentActionObjects = allActionObjects;
         _stage.CheckStageState();

@@ -15,6 +15,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private TrashCleaner _trashCleaner;
     [SerializeField] private Animator animator;
+    [SerializeField] private DamagableSphere damagableSphere;
     private Vector3 pos;
     private int stageCount = 0;
     public bool allEnemiesDead = false;
@@ -28,6 +29,7 @@ public class StageController : MonoBehaviour
     public void StartNewStage()
     {
         stageCount++;
+        damagableSphere.Init();
         if (stageCount % stageEnemyAdd == 0)
         {
             enemyManager.SetEnemyCount(1);

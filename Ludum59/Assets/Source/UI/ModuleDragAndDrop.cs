@@ -9,6 +9,7 @@ public class ModuleDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler,
     private Transform startParent;
     private CanvasGroup canvasGroup;
     private Canvas canvas;
+    private GameObject prefab;
 
     void Awake()
     {
@@ -27,16 +28,21 @@ public class ModuleDragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler,
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        startPosition = transform.position;
-        startParent = transform.parent;
-        
+        transform.SetParent(canvas.transform);
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvas.transform as RectTransform,
+                eventData.position,
+                canvas.worldCamera,
+                out Vector2 localPoint))
+        {
+            transform.localPosition = localPoint;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
