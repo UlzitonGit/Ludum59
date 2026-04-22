@@ -16,6 +16,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private TrashCleaner _trashCleaner;
     [SerializeField] private Animator animator;
     [SerializeField] private DamagableSphere damagableSphere;
+    [SerializeField] private AdController adController;
     [SerializeField] private int maxStages;
     private Vector3 pos;
     private int stageCount = 0;
@@ -30,6 +31,10 @@ public class StageController : MonoBehaviour
     public void StartNewStage()
     {
         stageCount++;
+        if (stageCount > 1)
+        {
+            adController.ShowAdPanel(stageCount);
+        }
         damagableSphere.Init();
         if (stageCount % stageEnemyAdd == 0)
         {
