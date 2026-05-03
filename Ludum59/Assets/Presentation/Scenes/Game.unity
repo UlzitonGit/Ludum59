@@ -23271,6 +23271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467251043}
   - component: {fileID: 467251044}
+  - component: {fileID: 467251045}
   m_Layer: 0
   m_Name: StageController
   m_TagString: Untagged
@@ -23316,8 +23317,21 @@ MonoBehaviour:
   animator: {fileID: 397778979}
   damagableSphere: {fileID: 2036211174}
   adController: {fileID: 532883271}
+  gaController: {fileID: 467251045}
   maxStages: 5
   allEnemiesDead: 0
+--- !u!114 &467251045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467251042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1109d7ac21fd674593201438d70f857, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GAController
 --- !u!1 &470757160
 GameObject:
   m_ObjectHideFlags: 0
@@ -33207,7 +33221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -607.0773, y: 242.67294}
+  m_AnchoredPosition: {x: -607.07733, y: 242.67294}
   m_SizeDelta: {x: -1315.4286, y: -530.9299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690874192
@@ -59267,7 +59281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -607.07996, y: 214}
+  m_AnchoredPosition: {x: -607.08, y: 214}
   m_SizeDelta: {x: -1315.4287, y: -530.92975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240301096
@@ -62670,7 +62684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -500.23853, y: -115.197784}
+  m_AnchoredPosition: {x: -500.2386, y: -115.197784}
   m_SizeDelta: {x: 179.5231, y: 354.3956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454782221

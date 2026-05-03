@@ -1,3 +1,4 @@
+using GameAnalyticsSDK;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour, IDamagable
@@ -14,6 +15,9 @@ public class EnemyHealth : MonoBehaviour, IDamagable
         if (health <= 0 && !_isDead)
         {
             _isDead = true;
+            string eventId = $"enemyKilled:{gameObject.name}";
+               
+            GameAnalytics.NewDesignEvent(eventId);
             enemyController.StopAllCoroutines();
             Instantiate(deathVFX, transform.position, Quaternion.identity);
             enemyController.enabled = false;

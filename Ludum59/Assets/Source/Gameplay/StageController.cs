@@ -17,6 +17,7 @@ public class StageController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private DamagableSphere damagableSphere;
     [SerializeField] private AdController adController;
+    [SerializeField] private GAController gaController;
     [SerializeField] private int maxStages;
     private Vector3 pos;
     private int stageCount = 0;
@@ -51,6 +52,7 @@ public class StageController : MonoBehaviour
         allEnemiesDead = false;
         if (stageCount >= maxStages)
         {
+            gaController.OnLevelCompleted();
             StartCoroutine(End());
         }
     }

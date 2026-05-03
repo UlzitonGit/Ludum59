@@ -1,4 +1,5 @@
 using System;
+using GameAnalyticsSDK;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,7 @@ public class PlayerHealth : MonoBehaviour, IDamagable
 
     public void GetDamage(int damage)
     {
+        OnLivesRefilled(currentHealth, currentHealth-damage, "damage");
         if (isDefend) damage = damage / 3;
         currentHealth -= damage;
         playerUI.UpdateUI(currentHealth);
@@ -29,8 +31,14 @@ public class PlayerHealth : MonoBehaviour, IDamagable
     public void Heal(int heal)
     {
         if(currentHealth + heal > health) return;
+        OnLivesRefilled(currentHealth - heal, currentHealth, "heal");
         currentHealth += heal;
         playerUI.UpdateUI(currentHealth);
+    }
+    public void OnLivesRefilled(int livesBefore, int livesAfter, string source)
+    {
+        GameAnalytics.NewResourceEvent(GAResourceFlowType.Sink, "lives", livesBefore - livesAfter, "lives_type", source);
+        Debug.Log($"Жизни обновленны: {livesBefore} → {livesAfter}");
     }
 
     private void OnTriggerEnter(Collider other)

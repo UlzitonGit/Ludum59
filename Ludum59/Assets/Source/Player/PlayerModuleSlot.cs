@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GameAnalyticsSDK;
 using UnityEngine;
 
 public class PlayerModuleSlot : MonoBehaviour
@@ -23,6 +24,10 @@ public class PlayerModuleSlot : MonoBehaviour
           {
                SetThirdModule(module);
           }
+          string eventId = $"upgradeCollected:{module.name}";
+               
+          GameAnalytics.NewDesignEvent(eventId);
+          
      }
      public void PrepareModule()
      {
